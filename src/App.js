@@ -14,6 +14,11 @@ const addTask = () =>{
   setTodoList([...todoList, newTask]);
 }
 
+const deleteTask = (taskName) =>{
+
+  setTodoList(todoList.filter((task)=> task !== taskName));
+}
+
 return (<div className='App'>
     <div className='addTask'>
         <input type="text" onChange={handleChange} />
@@ -21,7 +26,12 @@ return (<div className='App'>
     </div>
     <div className='list'>
         {todoList.map((task)=> {
-          return <p className='list-item'>{task}</p>
+          return (
+            <div>
+              <p className='list-item'>{task}</p>
+              <button className='remove-button' onClick={()=>deleteTask(task)}>X</button>
+            </div>
+            );
         })}
     </div>
   </div>

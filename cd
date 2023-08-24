@@ -1,0 +1,35 @@
+[33mcommit 5fcd9ea8861ca842f8e1167d804ba3ba2fcdf8c5[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Piotr Zapala <piotr.zapala.dev@gmail.com>
+Date:   Fri Aug 25 00:51:41 2023 +0200
+
+    CRUD #1 Todo List
+
+[33mcommit 6faba2cbad7435a8f3cf50359e7de6097e92e92c[m
+Author: Piotr Zapala <piotr.zapala.dev@gmail.com>
+Date:   Fri Aug 25 00:28:17 2023 +0200
+
+    States
+
+[33mcommit 7d974e543972cd9b84f51266519576a8abac673b[m
+Author: Piotr Zapala <piotr.zapala.dev@gmail.com>
+Date:   Thu Aug 24 23:25:30 2023 +0200
+
+    Component in File - Working with objects and lists
+
+[33mcommit 91dce5b962c9ce4722c972aa9e810259f11d6fd4[m
+Author: Piotr Zapala <piotr.zapala.dev@gmail.com>
+Date:   Thu Aug 24 23:09:26 2023 +0200
+
+    Styles - Operators
+
+[33mcommit 116c5436f7f412235fcf2ed5ee32df38e4125316[m
+Author: Piotr Zapala <piotr.zapala.dev@gmail.com>
+Date:   Thu Aug 24 22:50:48 2023 +0200
+
+    JSX - Components - Props
+
+[33mcommit 26481ce9d2dd1c4edae0ceaba826e5e3417d69ff[m
+Author: Piotr Zapala <piotr.zapala.dev@gmail.com>
+Date:   Thu Aug 24 22:15:14 2023 +0200
+
+    Init

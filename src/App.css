@@ -39,3 +39,7 @@ button{
   width: 20%;
   height: 50px;
 }
+.remove-button{
+  padding: 1rem;
+  width: auto;
+}
