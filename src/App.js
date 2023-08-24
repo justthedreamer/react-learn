@@ -1,23 +1,16 @@
 import './App.css';
-import { User } from './User';
-
-
+import {useState} from "react";
 
 function App() {
-  //const names = ['Pedro','Jake','Samanta','Jessica','Mike','Justin','Martin'];
-  const users = [
-    { name : "Pedro", age : 21},
-    { name : "Jake", age : 25},
-    { name : "Samanta", age : 45},
-  ];
+  const [count, setCount] = useState(0);
 
-  return (
-    <div className="App">
-      {users.map((user,key)=>{
-        return <User key={key} name = {user.name} age = {user.age}></User>
-      })}
-    </div>
-  );
+  return <div className='App'>
+    <button onClick={()=>{setCount(count +1)}}>Increase</button>
+    <button onClick={()=>{setCount(count -1)}}>Decrease</button>
+    <button onClick={()=>{setCount(0)}}>Set to zero</button>
+
+    <h1>{count}</h1>
+  </div>
 }
 
 export default App;

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  transition: .7s;
 }
 
 .App-logo {
@@ -30,4 +31,10 @@
 
 .name{
   color: #61dafb;
+}
+button{
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+  height: 50px;
 }
