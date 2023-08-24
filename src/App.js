@@ -1,18 +1,21 @@
 import './App.css';
+import { User } from './User';
 
 
 
 function App() {
-  const age = 17;
-  const isGreen = true;
+  //const names = ['Pedro','Jake','Samanta','Jessica','Mike','Justin','Martin'];
+  const users = [
+    { name : "Pedro", age : 21},
+    { name : "Jake", age : 25},
+    { name : "Samanta", age : 45},
+  ];
 
   return (
     <div className="App">
-      {age >= 18 ? <h1>OverAge</h1> : <h1>Under Age</h1>}
-      
-      <h1 style = {{color: isGreen? "green" : "red", backgroundColor: 'black' }}>This has color</h1>
-
-      {isGreen && <button>Click me</button>}
+      {users.map((user,key)=>{
+        return <User key={key} name = {user.name} age = {user.age}></User>
+      })}
     </div>
   );
 }
