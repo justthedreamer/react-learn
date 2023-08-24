@@ -11,12 +11,15 @@ const handleChange = (event) =>{
 }
 
 const addTask = () =>{
-  setTodoList([...todoList, newTask]);
+  const task = {
+    id: todoList.length === 0 ? 1 : todoList[todoList.length -1 ].id + 1,
+    taskName: newTask
+  }
+  setTodoList([...todoList, task]);
 }
 
-const deleteTask = (taskName) =>{
-
-  setTodoList(todoList.filter((task)=> task !== taskName));
+const deleteTask = (taskId) =>{
+  setTodoList(todoList.filter((task)=> task.id !== taskId));
 }
 
 return (<div className='App'>
@@ -28,8 +31,8 @@ return (<div className='App'>
         {todoList.map((task)=> {
           return (
             <div>
-              <p className='list-item'>{task}</p>
-              <button className='remove-button' onClick={()=>deleteTask(task)}>X</button>
+              <p className='list-item'>{task.taskName}</p>
+              <button className='remove-button' onClick={()=>deleteTask(task.id)}>X</button>
             </div>
             );
         })}

@@ -3,43 +3,33 @@
   transition: .7s;
   font-size: 2rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #6e6a86;
+  color: #e0def4;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.name{
-  color: #61dafb;
+input{
+  display: block;
+  margin-inline: auto;
+  width: 20rem;
+  padding: .5rem;
+  color: #e0def4;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #908caa;
 }
 button{
-  display: block;
-  margin: 0 auto;
-  width: 20%;
-  height: 50px;
+  font-size: 14px;
+  padding: .5em 2em;
+  background-color: #31748f;
+  border: 1px solid black;
+  color: #e0def4;
+  border-radius: 1rem;
+  cursor: pointer;
 }
-.remove-button{
-  padding: 1rem;
-  width: auto;
+.list div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
 }
