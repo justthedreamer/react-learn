@@ -1,24 +1,24 @@
 import { useEffect, useState } from 'react';
-import './App.css';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import { Home } from './pages/Home';
+import { Menu } from './pages/Menu';
+import { Contact } from './pages/Contact';
+import { Navbar } from './Navbar';
 import Axios  from 'axios';
+import './App.css';
 
 function App() {
-  const [ name, setName] = useState("")
-  const [randomPerson,setRandomPerson] = useState(null);
-
-  const fetchData = () =>{
-    Axios.get(`https://api.agify.io/?name=${name}`).then((res)=>{
-      setRandomPerson(res.data)
-    })
-  }
-
   return (
     <div className='App'>
-      <input type="text" placeholder='Ex. Pedro..' onChange={(e)=>{setName(e.target.value)}}/>
-      <button onClick={fetchData}> Predict Age</button>
-      <p>Name: {randomPerson?.name}</p>
-      <p>Predicted age : {randomPerson?.age}</p>
-      <p>Count : {randomPerson?.count}</p>
+      <Router>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/menu' element={<Menu />}/>
+          <Route path='/contact' element={<Contact />}/>
+          <Route path='*' element={<p>Oops... Something goes wrong :(</p>}></Route>
+        </Routes>
+      </Router>
     </div>
   )
 }
