@@ -1,7 +1,7 @@
-export const Contact = ()=>{
-    return (
+export const Contact = () =>{
+    return(
         <div>
-            <p>Contact site</p>
+            <p>Contact us</p>
         </div>
     )
 }
