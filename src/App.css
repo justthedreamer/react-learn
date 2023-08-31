@@ -37,3 +37,7 @@ button{
 a{
   margin-inline: .5rem;
 }
+.error{
+  color: red;
+  font-size: 1.5rem;
+}
