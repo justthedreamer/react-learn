@@ -1,19 +1,9 @@
-import { useState } from 'react';
-import { useCounter } from './componenets/useCounter';
 import './App.css';
+import { Person } from './componenets/Person';
 
 function App() {
-  const {counter,increaseCounter,decreaseCounter,restartCounter} = useCounter(0)
-
-
   return (
-    <div className='App'>
-      <button onClick={increaseCounter}>Increase</button>
-      <button onClick={decreaseCounter}>Decrease</button>
-      <button onClick={restartCounter}>Set to 0</button>
-
-      <p>{counter}</p>
-    </div>
+    <Person name = {"Pedro"} email= "marcink@gmail.com" age={21} isMarried = {true} friends = {["jessica","jake","jerry","paul"]}/>
   )
 }
 
