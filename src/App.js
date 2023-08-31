@@ -1,14 +1,22 @@
-import { useEffect, useState, createContext } from 'react';
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
-import { Form } from './Form'
 import './App.css';
-
-export const AppContext = createContext();
+import { Cat } from './componenets/Cat'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 function App() {
+  const client = new QueryClient({
+    defaultOptions:{
+      queries: {
+        refetchOnWindowFocus: true,
+      }
+    }
+  })
+
+
   return (
     <div className='App'>
-      <Form/>
+      <QueryClientProvider client= {client}>
+        <Cat />
+      </QueryClientProvider>
     </div>
   )
 }
